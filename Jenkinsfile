@@ -1,12 +1,9 @@
-pipeline { 
-  agent {
-    label 'Linux'
-  }
-  stages {
-    stage ('Script') {
+pipeline {
+  agent any
+    stages {
+      stage('Hello world') {
       steps {
-        sh 'chmod +x test_mb_jenkins.sh'
-        sh './test_mb_jenkins.sh'
+        echo 'Hello world !'
       }
     }
   }
